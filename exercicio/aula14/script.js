@@ -16,3 +16,4 @@ img.src = 'imagens/1tarde.png'
         img.src = 'imagens/1noite.png'  
     }
 }
+
