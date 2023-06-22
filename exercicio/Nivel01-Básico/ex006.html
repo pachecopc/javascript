@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Exercicio 05</title>
+    <title>Exercicio 06</title>
 </head>
 <body>
     <p><a href="file:///C:/Users/paulo/Documents/Estudo/javascript/exercicio/index1.html">Voltar ao Inicio</a></p>
     <img src="eu-perfil.jpg" alt="">
-    <h1>Trabalhando com Numeros </h1>
-
+    <h1>Somando dois Números  </h1>
+    <h2>Nível 1: JavaScript Básico</h2>
+    <h3>Exercício 006</h3>
+    <button onclick="somar()">Iniciar a soma</button>
+    <section id="res">
+       <p>O resultado vem aqui...</p>
+    </section>
     <script>
-        var n1 = Number(window.prompt('Digite um neumero'))
-        var n2 = Number( window.prompt('digite outro numero'))
-        var s = n1 + n2
-        window.alert('a soma dos valores é '+ s)
+        function somar(){
+        let n1 = Number(window.prompt('Digite um neumero'))
+        let n2 = Number( window.prompt('digite outro numero'))
+         soma = n1 + n2
+        
+         let res = document.querySelector('section#res')
+
+         res.innerHTML = `<p>A soma entre <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <strong>${soma}</strong> !</p>`
+        } 
     </script>
     
 </body>

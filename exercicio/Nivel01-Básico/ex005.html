@@ -6,17 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Exercicio 05</title>
+    <style>
+        body{
+            font: 12pt Arial;
+        }
+        button{
+            font-size: 12pt; padding: 30px;
+        }
+        span{
+            background-color: rgb(113, 156, 113);
+            font:20px;
+        }
+    </style>
+
 </head>
 <body>
     <p><a href="file:///C:/Users/paulo/Documents/Estudo/javascript/exercicio/index1.html">Voltar ao Inicio</a></p>
     <img src="eu-perfil.jpg" alt="">
-    <h1>Trabalhando com Numeros </h1>
+    <h1>Manipulando Números </h1>
+    <h2>Nível 1: JavaScript Básico</h2>
+    <h3>Exercício 005</h3>
+
+    <button onclick="calcular()">Clique para Calcular</button>
+    <section id="res">
+        <p>O Resultado vem aqui...</p>
+    </section>
 
     <script>
-        var n1 = Number(window.prompt('Digite um neumero'))
-        var n2 = Number( window.prompt('digite outro numero'))
-        var s = n1 + n2
-        window.alert('a soma dos valores é '+ s)
+        //window.alert('Seja Bem-Vindo(a) ao meu Site !')
+
+        function calcular(){
+         let n1 = Number(window.prompt('Digite um Número:'))
+         let res = document.querySelector('section#res')
+
+         res.innerHTML = `<p>O dobro de ${n1} é ? <span>${n1*2}</span> <hr>A Metade de ${n1} é ?<span> ${n1/2}</span> ! </p>`
+         //res.innerHTML = `<p>A Metade de ${n1} é ${n1/2}! </p>`
+        }
+        
     </script>
     
 </body>
