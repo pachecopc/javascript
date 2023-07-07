@@ -18,3 +18,19 @@ const relogio = setInterval(function time(){
     minutos.textContent = min;
     segundos.textContent = s;
 })
+
+const data = document.getElementById('data')
+
+        
+
+         let dt=new Date();
+        let diasem=dt.getDay();
+        let dia=dt.getDate()
+        let mes=dt.getMonth();
+        let ano=dt.getFullYear();
+        
+        let meses=new Array("Janeiro","Fevereirao","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+        let semanas=new Array("Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sábado")
+
+
+        document.write("<div class='q1'><marquee behavior= direction='right'><h1>Hoje é ! " + semanas[diasem] + ", " + dia +  " de " + meses[mes] + " de " + ano + ".</marquee></h1></div>");
