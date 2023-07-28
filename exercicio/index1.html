@@ -9,50 +9,55 @@
     <style>
     body{
         background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
-    }
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            column-rule: 2px solid black;
+            gap: 5px;
+            padding: 5px;
+        }
     
         li{ 
             
             font-size: 20px;
         }
-        span{ color: black;}
-        .n1-2{ 
-         
-            display: inline-block;
-        }         
-        .n3-4{
+        span{ 
+            color: black;
+            margin: 10px;
+        }
+              
+        .sessao{   
+            flex-grow: 1;                 
+            border: 1px solid white;
+            flex-grow: 1;
+           
           
-            display: inline-block;
-            top: -10px;
+
+        }   
+        .sessao:hover {
+            background-color: rgb(255, 251, 0);
+        }
+        li:hover, a:hover, span:hover {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
         }
 
-        #n1{
-            border: 1px solid black;
-            background-color: antiquewhite;
+        h2 , p {
+            margin: 10px;
         }
-        #n2{
-            border: 1px solid black;
-            margin-left: 10px;
-            background-color: aquamarine;
+        p{
+         font-size: 20px;
+         font-family: Arial, Helvetica, sans-serif;
+        }  
+        li, a, span {
+            margin: 10px;
         }
-        #n3{
-            border: 1px solid black;
-            background-color: yellowgreen;
-        }
-        #n4{
-            border: 1px solid black;
-            margin-left: 10px;
-            background-color: cadetblue;
-        }
+        
 
-        .n1-2, .n3-4{
-            width: 35%;
-            margin:5px ;
-        }
-
-        h1{
-            text-align: center;
-        }
+        
 
 
         
@@ -60,9 +65,11 @@
 </head>
 <body>
     <img src="eu-perfil.jpg" alt="">
+    
     <div class="container">
-    <div id="n1" class="n1-2">
-        <h1>Nivel 1: JavaScript Básica</h1>
+    <div id="n1" class="sessao">
+        <h2>Nivel 1: JavaScript</h2>
+        <p>Básico</p>
     <ol>
        <li><a href="Nivel01-Básico/ex001.html">Ex001:<span>Olá, Mundo!</span></a></li>       
        <li><a href="Nivel01-Básico/ex002.html">Ex002:<span>Interagindo com Botão</span> </a></li>       
@@ -77,8 +84,9 @@
     </ol>
 </div>
 
-<div id="n2" class="n1-2">
-    <h1>Nivel 2: Condições em JavaScript</h1>
+<div id="n2" class="sessao">
+    <h2>Nivel 2: JavaScript</h2>
+    <p>Condições</p>
     <ol>
        <li><a href="Nivel2-Condicoes/ex011.html">Ex011:<span>Calculando Média e dando Parabéns</span></a></li>       
        <li><a href="Nivel2-Condicoes/ex012.html">Ex012:<span>É par ou é impar?</span> </a></li>       
@@ -92,9 +100,11 @@
        <li><a href="Nivel2-Condicoes/ex020.html">Ex020:<span>Estações do ano</span></a></li>
        
     </ol>
-</div><hr>
-<div id="n3" class="n3-4">
-    <h1>Nivel 3: Repetições em JavaScript </h1>
+</div>
+<div id="n3" class="sessao">
+    <h2>Nivel 3:JavaScript </h2>
+    <p>Repetições</p>
+
     <ol>
        <li><a href="Ex001.html">Ex021:<span></span></a></li>       
        <li><a href="Ex002.html">Ex022:<span></span> </a></li>       
@@ -109,20 +119,88 @@
      
     </ol>
 </div>
-<div id="n4" class="n3-4">
-    <h1>Nivel 4: Outros em JavaScript</h1>
+<div id="n4" class="sessao">
+    <h2>Nivel 4:JavaScript</h2>
+    <p>Outros</p>
     <ol>
-       <li><a href="Nivel4-Desafio/ex031.html">Ex031: <span>Calculando Números </span></a></li>       
-       <li><a href="Nivel4-Desafio/ex032.html">Ex032: interagindo com botão</a></li>       
-       <li><a href="Nivel4-Desafio/ex033.html">Ex033: Varios Exercícios<span></span></a></li>       
-       <li><a href="Nivel4-Desafio/exe34.html">Ex034: Detran<span></span></a></li>
-       <li><a href="Nivel4-Desafio/relogio/index.html">Ex035: Relógio Digital<span></span></a></li>
-       <li><a href="Nivel4-Desafio/aulaDom/index.html">Ex036: Aula de DOM<span></span> </a></li>       
-       <li><a href="Ex009.html">Ex0:<span></span></a></li>                 
+       <li><a href="Nivel4-Desafio/ex031.html">Ex031:<span>Calculando Números </span></a></li>       
+       <li><a href="Nivel4-Desafio/ex032.html">Ex032:<span> com botão</span></a></li>       
+       <li><a href="Nivel4-Desafio/ex033.html">Ex033:<span>Varios Exercícios</span></a></li>       
+       <li><a href="Nivel4-Desafio/exe34.html">Ex034:<span>Detran</span></a></li>
+       <li><a href="Nivel4-Desafio/relogio/index.html">Ex035:<span>Relógio Digital</span></a></li>
+       <li><a href="Nivel4-Desafio/aulaDom/index.html">Ex036:<span> Aula de DOM</span> </a></li>       
+       <li><a href="Nivel4-Desafio/exe037.html">Ex037:<span>Teste</span></a></li>                 
        <li><a href="modelo/modelo.html">Ex038:<span>Modelo</span></a></li>
        <li><a href="">Ex039:<span></span></a></li>
-       <li><a href="aula12/exerc12.html">Ex040:Votoaçã<span></span></a></li> 
-       <li><a href="Nivel4-Desafio/exe037.html">Ex037:Teste<span></span></a></li>      
+       <li><a href="aula12/exerc12.html">Ex040:<span>Votoaçã</span></a></li> 
+            
+    </ol>
+</div>
+<div id="n5" class="sessao">
+    <h2>Nivel 5: HTML-CSS</h2>
+    <p>Basico</p>
+    <ol>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer01.html">Exc001:<span>Teste Layoult Cidade</span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer02.html">Exc002:<span>Paragrafos e quebra de linhas</span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer03.html">Exc003:<span>Testando carregamento de imagens</span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer04.html">Exc004:<span>Teste de Favicon</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer06.html">Exc005:<span>06</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer07.html">Exc006:<span>07</span> </a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer08.html">Exc007:<span>08</span></a></li>                 
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer09.html">Exc008:<span>09</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer11.html">Exc009:<span>11</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer12.html">Exc0010:<span>12</span></a></li> 
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer13.html">Exc0011:<span>13</span></a></li>      
+    </ol>
+</div><div id="n6" class="sessao">
+    <h2>Nivel 6: HTML-CSS</h2>
+    <p>Intermediario</p>
+    <ol>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer14.html">Exc0012:<span></span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer15.html">Exc0013:<span></span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer15a.html">Exc0014:<span></span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer16.html">Exc0015:<span></span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer17.html">Exc0016:<span></span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer18.html">Exc0017:<span></span> </a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer19.html">Exc0018:<span>18</span></a></li>                 
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer20.html">Exc0019:<span>19</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer21.html">Exc0020:<span>20</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer22.html">Exc0021:<span>21</span></a></li> 
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer23.html">Exc0022:<span>22</span></a></li>      
+    </ol>
+</div>
+<div id="n7" class="sessao">
+    <h2>Nivel 7: HTML-CSS</h2>
+    <p>Avançado</p>
+    <ol>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer24.html">Exc0023:<span>Mesclagem de Celulas</span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\exer25.html">Exc0024:<span>Relação de Filmes</span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\exer026.html">Exc0025:<span>26</span></a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\Exer027.html">Exc0026:<span>Formatação de texto</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\test.html">Exc0027:<span>teste de Layout</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\grid-layout\grid1.html">Exc0028:<span>Grid 01</span> </a></li>       
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\grid-layout\grid2.html">Exc0029:<span>Grid 02</span></a></li>                 
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\grid-layout\grid3.html">Exc0030:<span>Grid 03</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\grid-layout\grid4.html">Exc0031:<span>Grid 04</span></a></li>
+       <li><a href="C:\Users\paulo\Documents\Estudo\html\exercicios\todos1\grid-layout\gri5geral.html">Exc0032:<span>Grid Geral</span></a></li> 
+       <li><a href="">Exc0033:<span></span></a></li>      
+    </ol>
+</div>
+<div id="n8" class="sessao">
+    <h2>Nivel 8: HTML-CSS</h2>
+    <p>DESAFIOS </p>
+    <ol>
+       <li><a href=""><span></span></a></li>       
+       <li><a href=""><span></span></a></li>       
+       <li><a href=""><span></span></a></li>       
+       <li><a href=""><span></span></a></li>
+       <li><a href=""><span></span></a></li>
+       <li><a href=""><span></span> </a></li>       
+       <li><a href=""><span></span></a></li>                 
+       <li><a href=""><span></span></a></li>
+       <li><a href=""><span></span></a></li>
+       <li><a href=""><span></span></a></li> 
+       <li><a href=""><span></span></a></li>      
     </ol>
 </div>
 </div>
