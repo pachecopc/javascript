@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokedes</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="pokedex.css">
+    <script src="main.js"></script>
+    <script src="poke-api.js"></script>
+    <script src="pokeman-mode.js"></script>
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>
-
-    <button id="btnTeste" type="button">TESTE</button>
-    
-    <script>
-       const btnTeste = document.getElementById("btnTeste")
-       btnTeste.addEventListener("click", function() {
-        console.log('Clicou no Botao ')
-       })
-       
-    </script>
+    <section class="content">
+        <h1>Pokedex</h1>
+        <ol id="pokemonList" class="pokemons"></ol>
+        <div class="pagination">
+        <button id="loadMoreButton" type="button">
+            Load More
+        </button>
+    </div>  
+    </section>
+   
 </body>
 </html>
