@@ -7,30 +7,51 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Exercicos Java Script</title>
     <style>
+        *{
+            margin: 0;
+            
+        }
     body{
         background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
-        }
+    
+        }      
 
-        section{
+        .container {
+            margin-top: 120px;
+                   }      
+
+        #container1{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             padding: 10px;
             margin: 5px;
             gap: 5px;
+            
         }
 
-        .container {
-            
-            grid-template-columns: auto auto auto auto;
-            column-rule: 2px solid black;
+        #container2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+            margin: 5px;
             gap: 5px;
-            padding: 5px;
-        }        
-    
-        li{ 
             
-            font-size: 20px;
         }
+
+        #container3{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+            margin: 5px;
+            gap: 5px;
+            
+        }
+    
+        li{   font-size: 20px;    }
+
         span{ 
             color: black;
             margin: 10px;
@@ -42,9 +63,8 @@
           
 
         }   
-        .sessao:hover {
-            background-color: rgb(255, 251, 0);
-        }
+        .sessao:hover {        background-color: rgb(255, 251, 0);  }
+
         li:hover, a:hover, span:hover {
             background-color: blue;
             color: white;
@@ -66,25 +86,52 @@
             padding: 0px 50px;
             width: 100px;
             height: 100px;
-
             }
+         
+         .header {
+            width: 100%;
+            text-align: center;
+            background-color: chartreuse;
+            margin: 0;
+         }   
+
+         .menu {
+          display: flex;
+          justify-content: space-between;
+          position: fixed;
+          top: 1px;
+          background-color: darkgrey;
+          width: 100%;
+         }
+            
+         
             
     </style>
 </head>
 <body>
-    <img src="eu-perfil.jpg" alt="">
-    <img src="img/html5.png" alt="icon HTML5">
-    <img src="img/css.png" alt="icon CSS">
-    <img src="img/js.png" alt="icon JS">
-    <img src="img/react.png" alt="icon React">
-    
+    <header class="menu">    
+      <img src="eu-perfil.jpg" alt="">
+      <img src="img/html5.png" alt="icon HTML5">
+      <img src="img/css.png" alt="icon CSS">
+      <img src="img/js.png" alt="icon JS">
+      <img src="img/react.png" alt="icon React">
+    <nav>
+        <ul>
+        <li><a href="1º sessão">1º Sessão</a></li>
+        <li><a href="2º sessão">2º Sessão</a></li>
+        <li><a href="#sessao3">3º Sessão</a></li>
+       </ul>
+    </nav>
+</header>
     <div class="container">
      <!--//////////////////////////////////////////////////////////////////////////////////////-->   
      <div class="divisao">
-        <h1>Sessão 01</h1>
+       
        </div> 
         <section id="container1">
-           
+          <header class="header">
+           <h2>1º Sessão</h2>
+        </header>
     <div id="n1" class="sessao">
         <h2>Nivel 1: JavaScript</h2>
         <p>Básico</p>
@@ -171,9 +218,13 @@
            
     </ol>
 </div>
+
 </section>
 <!--/////////////////////////Sessão 02/////////////////////////////////////////////////-->
 <section id="container2">
+    <header class="header">
+        <h2>2º Sessão</h2>
+     </header>
 <div id="n6" class="sessao">
     <h2>Nivel 6: HTML-CSS</h2>
     <p>Basico</p>
@@ -261,6 +312,9 @@
 </section>
 <!--///////////////Sessão 3/////////////////////////////////////////////////////////////-->
 <section id="container3">
+    <header class="header">
+        <h2 id="sessao3"> 3º Sessão</h2>
+     </header>
     <div id="n11" class="sessao">
         <h2>Nivel 11: HTML-CSS e JS</h2>
         <p>Projetos </p>
