@@ -1,0 +1,86 @@
+.container{
+    background-color: beige;
+    display: flex;
+}
+.item {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;
+}
+/*------------exercicio 02--------------------*/
+.container02{
+    background-color: beige;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+.item02 {
+    background-color: rgb(0, 255, 153);
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+/*------------exercicio 03--------------------*/
+.container03{
+    background-color: beige;
+    height: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+.item03 {
+    background-color: rgb(155, 231, 231);
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;
+}
+/*------------exercicio 04--------------------*/
+.container04{
+    background-color: beige;
+    height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.item04 {
+    background-color: rgb(178, 231, 155);
+    border: 1px solid black;
+    text-align: center;
+    
+}
+/*------------exercicio 05--------------------*/
+main{
+    background-color: beige;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    background-color: rgb(178, 231, 155);
+    border: 1px solid black;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    
+}
+/*------------exercicio 06--------------------*/
+.container06{
+    background-color: beige;
+    height: 200px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-around;
+   
+}
+.item06 {
+    background-color: rgb(231, 194, 155);
+    border: 1px solid black;
+    text-align: center;   
+    
+}
