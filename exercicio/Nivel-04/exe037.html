@@ -2,6 +2,22 @@
 <html>
 <head>
   <title>Cálculo da média final</title>
+  <style>
+    body {
+      background-color: blanchedalmond;
+    }
+
+    input {
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  </style>
   <script>
     function calcularMedia() {
       var nota1 = parseFloat(document.getElementById("nota1").value);
@@ -12,6 +28,16 @@
       var media = (nota1 + nota2 + nota3 + nota4) / 4;
 
       document.getElementById("media-final").innerText = "A média final é: " + media.toFixed(2);
+      if (med <= 5.5) {
+        res.innerHTML += '<p class="q1">Você está <strong class="c1">REPROVADO</strong></p>'
+} else if (med <= 6.5) {
+    res.innerHTML += '<p class="q2">Você está <strong class="c2">RECUPERAÇÃO</strong></p>'
+    } 
+     else if (med >= 7) {
+    res.innerHTML += '<p class="q3">Você está <strong class="c3">APROVADO</strong></p>'
+    } 
+
+      i
     }
   </script>
 </head>
