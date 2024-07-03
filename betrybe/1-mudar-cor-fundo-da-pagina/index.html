@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar cor do Fundo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: darkcyan;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        input{
+            border: none;
+            height: 36px;
+            width: 56px;
+            cursor: pointer;
+        }
+
+        .nome{
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>    
+    <main class="container">
+        <div class="nome">
+            <h2>Mudando a cor de dundo da pagína</h2>
+        </div>
+        
+        <div class="botao">
+            <span>Selecione uma cor:</span>
+            <input type="color" onchange="onchangeBg()">
+        </div>
+    </main>
+
+    <script>
+        const container = document.querySelector('.container');
+        const color = document.querySelector('input');
+
+        const defaultColor = '#fff';
+        container.style.backgroundColor = `${defaultColor}`;
+
+        function onchangeBg(){
+            container.style.backgroundColor = `${color.value}`
+        }
+    </script>
+</body>
+</html>
