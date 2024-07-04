@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Kanban</title>
+    <style>
+        .kanban {
+            display: flex;
+            justify-content: center;
+            min-height: 400px;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .column {
+            padding: 10px;
+            min-width: 200px;
+            border-radius: 5px;
+            background-color: cornflowerblue;
+        }
+
+        .item {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .dragging {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="kanban">
+      <div class="column">
+        <div class="item" draggable="true">Card 01</div>
+        <div class="item" draggable="true">Card 02</div>
+      </div> 
+      
+      <div class="column">
+        <div class="item" draggable="true">Card 03</div>
+        <div class="item" draggable="true">Card 04</div>
+      </div>    
+
+      <div class="column">
+        <div class="item" draggable="true">Card 05</div>
+        <div class="item" draggable="true">Card 06</div>
+      </div>    
+
+    </div>
+
+    <script>
+      const columns = document.querySelectorAll(".column");
+      
+      document.addEventListener("dragstart", (e) => {
+        e.target.classList.add("dragging");
+      })
+
+      document.addEventListener("dragend", (e) => {
+        e.target.classList.remove("dragging");
+      })
+
+
+      columns.forEach((item) => {
+        item.addEventListener("dragover", (e) => {
+            const dragging = document.querySelector(".dragging");
+            const applyAfter = getNewPosition(item, e.clientY);
+
+            if(applyAfter){
+                applyAfter.isertAdjacentElement("afterend", dragging);
+            } else {
+                item.prepend(dragging);
+            }
+        })
+      })
+
+      function getNewPosition(column, positionY){
+        const cards = column.querySelectorAll(".item:not(.dragging)");
+        let result;
+
+        for(let refer_card of cards){
+            const box = refer_card.getBoundingClientRect();
+            const boxCenterY = box.y + box.height / 2;
+
+            if(positionY >= boxCenterY) result = refer_card;
+        }
+        return result;
+      }
+    </script>
+</body>
+</html>
