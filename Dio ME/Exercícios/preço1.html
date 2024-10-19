@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço de Viagem 01</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+ /* input, select, text {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}*/
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input {
+  font-size: 25px;  
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  text-align: center;
+}
+.container {    
+  width: 50%;
+  height: 450px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  font-size: 20px;  
+  float: left;
+ 
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+
+  margin-top: 6px;
+}
+
+.p1 {
+    background-color: aqua;
+    font-size: 20px;
+}
+
+#res{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    /*border-radius: 5px;
+     background-color: #f2f2f2;*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+    </style>
+</head>
+<body>
+  <p><a href="file:///C:/Users/paulo/Documents/Estudo/javascript/exercicio/index1.html">Voltar ao Menu</a></p>
+    <h1>Custo de Viagem </h1>
+ <div class="container">
+    <form action="">
+       <div class="row">
+         <div class="col-25">
+           <label for="">Preço Combustível</label>
+         </div> 
+         <div class="col-75">  
+           <input type="text" name="txtpr" id="txtpr">
+         </div>
+       </div>
+
+       <div class="row">
+        <div class="col-25">
+          <label for="">Gasto Médio por Km</label>
+        </div> 
+        <div class="col-75">  
+          <input type="text" name="txtga" id="txtga">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="">Distância Percorrida Km</label>
+        </div> 
+        <div class="col-75">  
+          <input type="text" name="txtdis" id="txtdis">
+        </div>
+        <p><input id="myInput" type="button" value="Calcular" onclick="calcular()" id="calcular"
+            ></p>
+      </div> 
+      <div id="res">
+        Calculo Final...
+          
+      </div>          
+    </form>
+ </div>  
+
+ <script>
+    function calcular() {
+        var pr = window.document.getElementById('txtpr')
+        var ga = window.document.getElementById('txtga')
+        var dis = window.document.getElementById('txtdis')
+        var res = window.document.getElementById('res')
+
+        var n1 = Number.parseInt (pr.value)
+        var n2 = Number (ga.value)
+        var n3 = Number.parseInt (dis.value)
+        var s1 = n3 / n2 
+        var s2 = ( s1 * n1)        
+        var s = s2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        res.innerHTML = `<p class="p1"> O valor da Viagem é de? <strong>${s}</strong></p>`
+    }
+
+    var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();document.getElementById("myInput").click();
+    }
+});    
+ </script>
+</body>
+</html>

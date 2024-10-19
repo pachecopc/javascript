@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Exercicio </title>
+    <style>
+        .q1{
+            display: flex;
+            border: 1px solid black;
+            background-color: bisque;
+            width: 50%;
+            height: 350px;
+
+        }
+
+        div{
+            border: 1px solid black;
+            background-color: aquamarine;
+            width: 350px;
+            height: 200px;
+            padding: 5px;
+            margin: 10px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <p><a href="file:///C:/Users/paulo/Documents/Estudo/javascript/exercicio/index1.html">Voltar ao Inicio</a></p>
+    <h1>Usando um JS Externo</h1>
+    <h2>Nível 1: JavaScript Básico</h2>
+    <h3>Exercício 010</h3>
+
+    <button onclick="acao1()">Ação 1</button>
+    <button onclick="acao2()">Ação 2</button>
+    <button onclick="acao3()">Ação 3</button>
+    <button onclick="acao4()">Ação 4</button>
+
+    <section id="saida">
+        <p>Aqui vou registrar suas acões com os botões acima.</p>
+         </section>
+
+         <section class="q1">
+            <div></div>
+            <div></div>
+        </section>
+
+
+    <script>
+        let resp = window.document.getElementById('saida')
+
+        function acao1() {
+            resp.innerHTML += '<p>Clicou no Primeiro Botão</p>'
+        }
+        function acao2() {
+            resp.innerHTML += '<p>Clicou no Segundo Botão</p>'
+        }
+        function acao3() {
+            resp.innerHTML += '<p>Clicou no Terceiro Botão</p>'
+        }
+        function acao4() {
+            resp.innerHTML += '<p>Clicou no Quarto Botão</p>'
+        }
+    </script>
+</body>
+</html>

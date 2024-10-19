@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="C:\Users\paulo\Documents\Estudo\javascript\exercicio\body.css">
+    <title>Exercicio 05</title>
+    <style>
+        body{
+            font: 12pt Arial;
+        }
+        button{
+            font-size: 12pt; padding: 30px;
+        }
+        span{
+            background-color: rgb(113, 156, 113);
+            font:20px;
+        }
+        .container {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 700px;
+            height: 550px;
+        }
+    </style>
+
+</head>
+<body>
+    <p><a href="file:///C:/Users/paulo/Documents/Estudo/javascript/exercicio/index1.html">Voltar ao Inicio</a></p>
+    <img src="eu-perfil.jpg" alt="">
+    <div class="container">
+    <h1>Manipulando Números </h1>
+    <h2>Nível 1: JavaScript Básico</h2>
+    <h3>Exercício 005 calculando o dobro e a metade de um número </h3>
+
+    <button onclick="calcular()">Clique para Calcular</button>
+    <section id="res">
+        <p>O Resultado vem aqui...</p>
+    </section>
+</div>
+    <script>
+        //window.alert('Seja Bem-Vindo(a) ao meu Site !')
+
+        function calcular(){
+         let n1 = Number(window.prompt('Digite um Número:'))
+         let res = document.querySelector('section#res')
+
+         res.innerHTML = `<p>O dobro de ${n1} é ? <span>${n1*2}</span> <hr>A Metade de ${n1} é ?<span> ${n1/2}</span> ! </p>`
+         //res.innerHTML = `<p>A Metade de ${n1} é ${n1/2}! </p>`
+        }
+        
+    </script>
+    
+</body>
+</html>

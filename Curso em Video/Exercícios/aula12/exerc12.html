@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade votação</title>
+</head>
+<body>
+    <a href ="/index1.html">Voltar ao Inicio</a>
+    <h1>Votção</h1>
+    Sua idade é?: <input type="number" name="txtvel" id="txtvel"> 
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+
+    <script>
+       function calcular() {
+    var txtv = window.document.querySelector('input#txtvel')
+    var res = window.document.querySelector('div#res')
+    var vel = Number(txtv.value)
+    res.innerHTML = `<p>Sua idade é de <strong> ${vel} </strong> anos</p>`
+    if (vel < 16) {
+        res.innerHTML += '<p class="q1">O <strong>VOTO</strong> Não  é Permitido</p>'
+} else if ( vel < 18 || vel > 65){
+    res.innerHTML += '<p class="q1">O <strong>VOTO</strong> é Opcional</p>'
+} else {
+    res.innerHTML += '<p class="q1">O <strong>VOTO</strong> é Obrigatorio </p>'
+}
+}
+
+
+
+
+
+
+
+
+     /*   var  idade = 68
+if (idade < 16){
+    console.log('Não vota')
+} else if ( idade < 18 || idade > 65) {
+    
+        console.log('Voto opcinal')
+    } else{
+
+        console.log('Voto Obrigatorio')
+    }
+    */
+    </script>
+</body>
+</html>
